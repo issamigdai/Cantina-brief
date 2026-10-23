@@ -43,10 +43,16 @@
             <div class="flex-1 flex flex-col justify-start p-[18px] bg-white rounded-xl shadow-sm">
                 <small class="text-[13px] text-slate-500">Jours prêts</small>
                 <big class="block mt-1 text-3xl font-bold text-slate-900">3 / 5</big>
+                <div class="h-[5px] rounded-lg w-full bg-[#E2E8F0] mt-4">
+                    <div class="h-[5px] rounded-lg w-[20%] bg-indigo-600 "></div>
+                </div>
             </div>
             <div class="flex-1 flex flex-col justify-start p-[18px] bg-white rounded-xl shadow-sm">
                 <small class="text-[13px] text-slate-500">Coût du jour (Lundi)</small>
                 <big class="block mt-1 text-3xl font-bold text-slate-900">40 DH</big>
+                <div class="h-[5px] rounded-lg w-full bg-[#E2E8F0] mt-4">
+                    <div class="h-[5px] rounded-lg w-[50%] bg-indigo-600 "></div>
+                </div>
             </div>
             <div class="flex-1 flex flex-col justify-start p-[18px] bg-white rounded-xl shadow-sm">
                 <small class="text-[13px] text-slate-500">Coût de la semaine</small>
@@ -79,12 +85,14 @@
                         <option value="foie-gras">Foie Gras</option>
                     </select>
                     <button
-                        class="h-10 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-sm font-semibold text-white">+
+                        class="h-10 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-sm font-semibold text-white"
+                        id="Ajouter">+
                         Ajouter une recette</button>
                 </div>
             </div>
-            <div class="flex flex-row items-stretch gap-3">
-                <div class="card flex-1 flex flex-col gap-2 p-3 h-[215px] rounded-lg border border-slate-300 bg-white">
+            <div class="flex flex-row flex-wrap items-stretch gap-3">
+                <div class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-slate-300 bg-white">
+                    <img src="img/Photo du plat.png" alt="Harira">
                     <h4 class="text-[15px] font-semibold text-slate-900">Harira</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -100,7 +108,8 @@
                             class="h-10 px-3 rounded-lg border text-[13px] border-red-300 bg-white text-red-600">Supprimer</button>
                     </div>
                 </div>
-                <div class="card flex-1 flex flex-col gap-2 p-3 h-[215px] rounded-lg border border-slate-300 bg-white">
+                <div class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-slate-300 bg-white">
+                    <img src="img/Photo du plat (1).png" alt="">
                     <h4 class="text-[15px] font-semibold text-slate-900">Pastilla au poulet</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-blue-100 text-blue-700">Plat
@@ -116,7 +125,8 @@
                             class="h-10 px-3 rounded-lg border text-[13px] border-red-300 bg-white text-red-600">Supprimer</button>
                     </div>
                 </div>
-                <div class="card flex-1 flex flex-col gap-2 p-3 h-[215px] rounded-lg border border-slate-300 bg-white">
+                <div class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-slate-300 bg-white">
+                    <img src="img/Photo du plat (2).png" alt="">
                     <h4 class="text-[15px] font-semibold text-slate-900">Pastèque</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -133,7 +143,8 @@
                     </div>
                 </div>
                 <div
-                    class="card flex-1 flex flex-col gap-2 p-3 h-[215px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    <img src="img/Photo du plat (3).png" alt="">
                     <h4 class="text-[15px] font-semibold text-slate-500">Velouté de légumes</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -151,7 +162,8 @@
                     </div>
                 </div>
                 <div
-                    class="card flex-1 flex flex-col gap-2 p-3 h-[215px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    <img src="img/Photo du plat (4).png" alt="">
                     <h4 class="text-[15px] font-semibold text-slate-500">Tajine de poulet</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -170,7 +182,8 @@
                     </div>
                 </div>
                 <div
-                    class="card flex-1 flex flex-col gap-2 p-3 h-[215px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    <img src="img/Photo du plat (5).png" alt="">
                     <h4 class="text-[15px] font-semibold text-slate-500">Couscous aux légumes</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -438,7 +451,7 @@
                 </div>
             </div>
         </div>
-        <form action="#" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
+        <form action="#" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center" id="popupdiv">
             <div class="popup w-[440px] flex flex-col gap-4 p-6 rounded-xl bg-white shadow-xl">
                 <div class="flex justify-between items-center">
                     <h3 class="text-lg font-bold text-slate-900">Ajouter une recette</h3>
@@ -483,7 +496,8 @@
                     </div>
                 </div>
                 <div class="flex justify-end gap-2.5">
-                    <button class="h-10 px-4 rounded-lg border border-slate-300 bg-white text-sm">Annuler</button>
+                    <button class="h-10 px-4 rounded-lg border border-slate-300 bg-white text-sm"
+                        id="Annuler">Annuler</button>
                     <button
                         class="h-10 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-sm font-semibold text-white">Ajouter</button>
                 </div>
