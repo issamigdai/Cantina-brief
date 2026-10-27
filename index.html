@@ -20,11 +20,6 @@
                 <a href="#" class="px-3 py-2.5 rounded-lg text-slate-600 text-sm font-semibold">Menu de la semaine</a>
             </div>
         </div>
-        <div
-            class="right-side flex items-center gap-2 h-10 px-4 border border-slate-300 rounded-lg bg-white text-sm font-semibold text-slate-600">
-            <input type="checkbox" name="checkbox" id="check" class="w-4 h-4">
-            <span>Mode-sombre</span>
-        </div>
     </nav>
     <main class="bg-[#F1F5F9] p-8 flex flex-col gap-5">
         <div class="flex justify-between items-end">
@@ -74,8 +69,6 @@
                         libres</small>
                 </div>
                 <div class="flex items-center gap-2.5">
-                    <input type="search" name="search-bar" id="search-bar"
-                        class="h-10 border border-slate-300 rounded-lg px-3 text-sm bg-white w-[212px]">
                     <label for="#" class="hidden">ENTRÉE</label>
                     <select name="entree" id="entree-select"
                         class="h-10 border border-slate-300 rounded-lg px-3 text-sm bg-white w-[160px]">
@@ -90,9 +83,9 @@
                         Ajouter une recette</button>
                 </div>
             </div>
-            <div class="flex flex-row flex-wrap items-stretch gap-3">
-                <div class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-slate-300 bg-white">
-                    <img src="img/Photo du plat.png" alt="Harira">
+            <div id="recipesContainer" class="flex flex-row flex-wrap items-stretch gap-3">
+                <div class="card flex-1 flex flex-col gap-2 p-3 h-[180px] rounded-lg border border-slate-300 bg-white">
+                    <!-- <img src="img/Photo du plat.png" alt="Harira"> -->
                     <h4 class="text-[15px] font-semibold text-slate-900">Harira</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -108,8 +101,8 @@
                             class="h-10 px-3 rounded-lg border text-[13px] border-red-300 bg-white text-red-600">Supprimer</button>
                     </div>
                 </div>
-                <div class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-slate-300 bg-white">
-                    <img src="img/Photo du plat (1).png" alt="">
+                <div class="card flex-1 flex flex-col gap-2 p-3 h-[180px] rounded-lg border border-slate-300 bg-white">
+                    <!-- <img src="img/Photo du plat (1).png" alt=""> -->
                     <h4 class="text-[15px] font-semibold text-slate-900">Pastilla au poulet</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-blue-100 text-blue-700">Plat
@@ -125,8 +118,8 @@
                             class="h-10 px-3 rounded-lg border text-[13px] border-red-300 bg-white text-red-600">Supprimer</button>
                     </div>
                 </div>
-                <div class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-slate-300 bg-white">
-                    <img src="img/Photo du plat (2).png" alt="">
+                <div class="card flex-1 flex flex-col gap-2 p-3 h-[180px] rounded-lg border border-slate-300 bg-white">
+                    <!-- <img src="img/Photo du plat (2).png" alt=""> -->
                     <h4 class="text-[15px] font-semibold text-slate-900">Pastèque</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -143,8 +136,8 @@
                     </div>
                 </div>
                 <div
-                    class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
-                    <img src="img/Photo du plat (3).png" alt="">
+                    class="card flex-1 flex flex-col gap-2 p-3 h-[180px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    <!-- <img src="img/Photo du plat (3).png" alt=""> -->
                     <h4 class="text-[15px] font-semibold text-slate-500">Velouté de légumes</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -162,8 +155,8 @@
                     </div>
                 </div>
                 <div
-                    class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
-                    <img src="img/Photo du plat (4).png" alt="">
+                    class="card flex-1 flex flex-col gap-2 p-3 h-[180px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    <!-- <img src="img/Photo du plat (4).png" alt=""> -->
                     <h4 class="text-[15px] font-semibold text-slate-500">Tajine de poulet</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -182,8 +175,8 @@
                     </div>
                 </div>
                 <div
-                    class="card flex-1 flex flex-col gap-2 p-3 h-[260px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
-                    <img src="img/Photo du plat (5).png" alt="">
+                    class="card flex-1 flex flex-col gap-2 p-3 h-[180px] rounded-lg border border-dashed border-slate-300 bg-slate-100">
+                    <!-- <img src="img/Photo du plat (5).png" alt=""> -->
                     <h4 class="text-[15px] font-semibold text-slate-500">Couscous aux légumes</h4>
                     <div class="tags flex flex-wrap gap-1.5">
                         <small
@@ -451,55 +444,62 @@
                 </div>
             </div>
         </div>
+
+
+
         <form action="#" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center" id="popupdiv">
             <div class="popup w-[440px] flex flex-col gap-4 p-6 rounded-xl bg-white shadow-xl">
                 <div class="flex justify-between items-center">
                     <h3 class="text-lg font-bold text-slate-900">Ajouter une recette</h3>
-                    <button aria-label="Fermer" class="w-8 h-8 border border-slate-300 rounded-lg">
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <label for="#" class="text-sm font-semibold text-slate-700">Nom du plat *</label>
-                    <input type="text" required class="h-10 border border-slate-300 rounded-lg px-3 text-sm bg-white">
-                    <div class="flex justify-between">
-                        <small class="text-xs text-slate-500">Le nom doit contenir entre 3 et 30 caractères.</small>
-                        <small class="text-xs text-slate-500">2/30</small>
-                    </div>
+                    <input type="text" class="h-10 border border-slate-300 rounded-lg px-3 text-sm bg-white"
+                        id="platName" required>
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <label for="#" class="text-sm font-semibold text-slate-700">Catégorie *</label>
-                    <select name="dessert" id="dessert-select"
-                        class="h-10 border border-slate-300 rounded-lg px-3 text-sm bg-white">
-                        <option value="">-- Choisissez un categorie --</option>
-                        <option value="fondant">Fondant au Chocolat</option>
-                        <option value="tarte">Tarte Tatin</option>
-                        <option value="glace">Café Gourmand</option>
-                    </select>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                            <input type="radio" name="category" value="Entrée" class="w-4 h-4" id="checkbox1" required>
+                            <label class="text-sm">Entrée</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="radio" name="category" value="Plat principal" class="w-4 h-4" id="checkbox2">
+                            <label class="text-sm">Plat principal</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="radio" name="category" value="Dessert" class="w-4 h-4" id="checkbox3">
+                            <label class="text-sm">Dessert</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <label for="#" class="text-sm font-semibold text-slate-700">Prix (DH) *</label>
-                    <input type="text" placeholder="Ex:25" required
-                        class="h-10 border border-slate-300 rounded-lg px-3 text-sm bg-white">
+                    <input type="number" placeholder="Ex:25" required
+                        class="h-10 border border-slate-300 rounded-lg px-3 text-sm bg-white" id="Price">
                 </div>
                 <div class="flex flex-col gap-2">
                     <label for="#" class="text-sm font-semibold text-slate-700">Qualité</label>
                     <div class="flex items-center gap-2">
-                        <input type="checkbox" class="w-4 h-4">
+                        <input type="radio" name="quality" value="bio" class="w-4 h-4" id="checkbox4" required>
                         <label class="text-sm">bio</label>
                     </div>
                     <div class="flex items-center gap-2">
-                        <input type="checkbox" class="w-4 h-4">
+                        <input type="radio" name="quality" value="Végétarien" class="w-4 h-4" id="checkbox5">
                         <label class="text-sm">Végétarien</label>
                     </div>
                     <div class="flex items-center gap-2">
-                        <input type="checkbox" class="w-4 h-4">
+                        <input type="radio" name="quality" value="Classique" class="w-4 h-4" id="checkbox6">
                         <label class="text-sm">Classique</label>
                     </div>
                 </div>
                 <div class="flex justify-end gap-2.5">
-                    <button class="h-10 px-4 rounded-lg border border-slate-300 bg-white text-sm"
+                    <button type="button" class="h-10 px-4 rounded-lg border border-slate-300 bg-white text-sm"
                         id="Annuler">Annuler</button>
                     <button
-                        class="h-10 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-sm font-semibold text-white">Ajouter</button>
+                        class="h-10 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-sm font-semibold text-white"
+                        id="Add">Ajouter</button>
                 </div>
             </div>
         </form>
